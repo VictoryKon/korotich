@@ -1,6 +1,10 @@
 #1. Create .csv file and write all this rows and header there
 #2. Given the workers list, create the list of managers
 
+
+import csv
+
+
 workers_list = [
    {'name': 'Lisa', 'age': 30, 'gender': 'f', 'position': 'Accountant'},
    {'name': 'Mike', 'age': 45, 'gender': 'm', 'position': 'Manager'},
@@ -15,8 +19,6 @@ workers_list = [
 
 
 def csv_creator(data):
-    import csv
-
     with open('people.csv', 'w') as csvfile:
         filewriter = csv.writer(csvfile, delimiter=';')
         filewriter.writerow(data[0].keys())
@@ -30,8 +32,6 @@ print(csv_creator(workers_list))
 
 
 def csv_creator1(data):
-    import csv
-
     with open('people.csv', 'w') as csvfile:
         filewriter = csv.writer(csvfile, delimiter=';')
         filewriter.writerow(['name', 'age', 'gender', 'position'])
